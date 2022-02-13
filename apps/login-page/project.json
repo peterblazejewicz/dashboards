@@ -1,0 +1,103 @@
+{
+  "projectType": "application",
+  "root": "apps/login-page",
+  "sourceRoot": "apps/login-page/src",
+  "prefix": "dashboards-app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "customWebpackConfig": {
+          "path": "webpack.browser.js"
+        },
+        "outputPath": "dist/apps/login-page",
+        "index": "apps/login-page/src/index.html",
+        "main": "apps/login-page/src/main.ts",
+        "polyfills": "apps/login-page/src/polyfills.ts",
+        "tsConfig": "apps/login-page/tsconfig.app.json",
+        "assets": [
+          "apps/login-page/src/favicon.ico",
+          "apps/login-page/src/assets"
+        ],
+        "styles": ["apps/login-page/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/login-page/src/environments/environment.ts",
+              "with": "apps/login-page/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "login-page:build:production"
+        },
+        "development": {
+          "browserTarget": "login-page:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "login-page:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/login-page/src/**/*.ts",
+          "apps/login-page/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@angular-builders/custom-webpack:karma",
+      "options": {
+        "customWebpackConfig": {
+          "path": "webpack.karma.js"
+        },
+        "main": "apps/login-page/src/test.ts",
+        "tsConfig": "apps/login-page/tsconfig.spec.json",
+        "karmaConfig": "apps/login-page/karma.conf.js",
+        "polyfills": "apps/login-page/src/polyfills.ts",
+        "styles": [],
+        "scripts": [],
+        "assets": []
+      }
+    }
+  },
+  "tags": []
+}

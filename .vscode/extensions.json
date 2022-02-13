@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "angular.ng-template",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "lucono.karma-test-explorer",
+    "ms-dotnettools.csharp",
+    "nrwl.angular-console"
+  ]
+}
