@@ -46,7 +46,8 @@
               "with": "apps/login-page/src/environments/environment.prod.ts"
             }
           ],
-          "outputHashing": "all"
+          "vendorChunk": true,
+          "outputHashing": "none"
         },
         "development": {
           "buildOptimizer": false,
