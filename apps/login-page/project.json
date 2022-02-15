@@ -22,7 +22,7 @@
         ],
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/login-page/src/styles.css"
+          "apps/login-page/src/styles.scss"
         ],
         "scripts": []
       },
@@ -98,7 +98,7 @@
         "polyfills": "apps/login-page/src/polyfills.ts",
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/login-page/src/styles.css"
+          "apps/login-page/src/styles.scss"
         ],
         "scripts": [],
         "assets": []

@@ -32,7 +32,7 @@
   },
   "generators": {
     "@nrwl/angular:application": {
-      "style": "css",
+      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "karma",
       "e2eTestRunner": "cypress"
@@ -42,7 +42,8 @@
       "unitTestRunner": "karma"
     },
     "@nrwl/angular:component": {
-      "style": "css"
+      "style": "scss",
+      "viewEncapsulation": "None"
     }
   }
 }

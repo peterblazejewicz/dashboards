@@ -19,7 +19,7 @@
         "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/admin/src/styles.css"
+          "apps/admin/src/styles.scss"
         ],
         "scripts": []
       },
@@ -95,7 +95,7 @@
         "polyfills": "apps/admin/src/polyfills.ts",
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/admin/src/styles.css"
+          "apps/admin/src/styles.scss"
         ],
         "scripts": [],
         "assets": []

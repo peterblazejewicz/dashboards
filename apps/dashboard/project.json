@@ -22,7 +22,7 @@
         ],
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/dashboard/src/styles.css"
+          "apps/dashboard/src/styles.scss"
         ],
         "scripts": []
       },
@@ -99,7 +99,7 @@
         "polyfills": "apps/dashboard/src/polyfills.ts",
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/dashboard/src/styles.css"
+          "apps/dashboard/src/styles.scss"
         ],
         "scripts": [],
         "assets": []
