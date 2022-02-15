@@ -20,7 +20,10 @@
           "apps/dashboard/src/favicon.ico",
           "apps/dashboard/src/assets"
         ],
-        "styles": ["apps/dashboard/src/styles.css"],
+        "styles": [
+          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
+          "apps/dashboard/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -94,11 +97,15 @@
         "tsConfig": "apps/dashboard/tsconfig.spec.json",
         "karmaConfig": "apps/dashboard/karma.conf.js",
         "polyfills": "apps/dashboard/src/polyfills.ts",
-        "styles": [],
+        "styles": [
+          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
+          "apps/dashboard/src/styles.css"
+        ],
         "scripts": [],
         "assets": []
       }
     }
   },
-  "tags": []
+  "tags": [],
+  "implicitDependencies": ["dashboard-styles"]
 }

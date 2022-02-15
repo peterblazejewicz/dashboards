@@ -20,7 +20,10 @@
           "apps/login-page/src/favicon.ico",
           "apps/login-page/src/assets"
         ],
-        "styles": ["apps/login-page/src/styles.css"],
+        "styles": [
+          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
+          "apps/login-page/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -93,11 +96,15 @@
         "tsConfig": "apps/login-page/tsconfig.spec.json",
         "karmaConfig": "apps/login-page/karma.conf.js",
         "polyfills": "apps/login-page/src/polyfills.ts",
-        "styles": [],
+        "styles": [
+          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
+          "apps/login-page/src/styles.css"
+        ],
         "scripts": [],
         "assets": []
       }
     }
   },
-  "tags": []
+  "tags": [],
+  "implicitDependencies": ["dashboard-styles"]
 }

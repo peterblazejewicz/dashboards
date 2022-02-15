@@ -17,7 +17,10 @@
         "polyfills": "apps/admin/src/polyfills.ts",
         "tsConfig": "apps/admin/tsconfig.app.json",
         "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-        "styles": ["apps/admin/src/styles.css"],
+        "styles": [
+          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
+          "apps/admin/src/styles.css"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -90,11 +93,15 @@
         "tsConfig": "apps/admin/tsconfig.spec.json",
         "karmaConfig": "apps/admin/karma.conf.js",
         "polyfills": "apps/admin/src/polyfills.ts",
-        "styles": [],
+        "styles": [
+          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
+          "apps/admin/src/styles.css"
+        ],
         "scripts": [],
         "assets": []
       }
     }
   },
-  "tags": []
+  "tags": [],
+  "implicitDependencies": ["dashboard-styles"]
 }

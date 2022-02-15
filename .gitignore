@@ -393,3 +393,4 @@ MigrationBackup/
 
 # custom output to wwwroot
 server/wwwroot/apps
+server/wwwroot/libs
