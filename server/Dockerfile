@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Dashboards/Dashboards.csproj", "Dashboards/"]
-RUN dotnet restore "Dashboards/Dashboards.csproj"
+COPY ["server/Dashboards.csproj", "Dashboards/"]
+RUN dotnet restore "server/Dashboards.csproj"
 COPY . .
 WORKDIR "/src/Dashboards"
 RUN dotnet build "Dashboards.csproj" -c Release -o /app/build

@@ -11,7 +11,7 @@
         "customWebpackConfig": {
           "path": "webpack.browser.js"
         },
-        "outputPath": "dist/apps/admin",
+        "outputPath": "server/wwwroot/apps/admin",
         "index": "apps/admin/src/index.html",
         "main": "apps/admin/src/main.ts",
         "polyfills": "apps/admin/src/polyfills.ts",

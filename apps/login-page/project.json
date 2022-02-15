@@ -11,7 +11,7 @@
         "customWebpackConfig": {
           "path": "webpack.browser.js"
         },
-        "outputPath": "dist/apps/login-page",
+        "outputPath": "server/wwwroot/apps/login-page",
         "index": "apps/login-page/src/index.html",
         "main": "apps/login-page/src/main.ts",
         "polyfills": "apps/login-page/src/polyfills.ts",
