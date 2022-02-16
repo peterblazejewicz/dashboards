@@ -10,7 +10,7 @@ Proving ground type of dotnet core web application with multiple client applicat
 - Angular 13 (or newer) multiple client applications
 - SCSS (Sass) library for styling (shared both server/client)
 - hot reload support for Dotnet web app client application (in development)
-- content replacement for Angular client applications
+- content (string/variable) replacement for Angular client applications
 - Angular client applications with routing
 - Nx workspace support
 
