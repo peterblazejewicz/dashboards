@@ -20,10 +20,7 @@
           "apps/login-page/src/favicon.ico",
           "apps/login-page/src/assets"
         ],
-        "styles": [
-          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/login-page/src/styles.scss"
-        ],
+        "styles": ["apps/login-page/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -99,7 +96,7 @@
         "polyfills": "apps/login-page/src/polyfills.ts",
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/login-page/src/styles.scss"
+          "apps/admin/src/styles.scss"
         ],
         "scripts": [],
         "assets": []

@@ -17,10 +17,7 @@
         "polyfills": "apps/admin/src/polyfills.ts",
         "tsConfig": "apps/admin/tsconfig.app.json",
         "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-        "styles": [
-          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/admin/src/styles.scss"
-        ],
+        "styles": ["apps/admin/src/styles.scss"],
         "scripts": []
       },
       "configurations": {

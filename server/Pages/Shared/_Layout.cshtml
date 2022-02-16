@@ -9,6 +9,7 @@
     <title>@ViewData["Title"] - Dashboards</title>
     <link rel="stylesheet" href="~/libs/shared/dashboard-styles/dashboards.css" />
     <link rel="stylesheet" href="~/Dashboards.styles.css" asp-append-version="true" />
+    @await RenderSectionAsync("Stylesheets", required: false)
 </head>
 <body>
     <header>

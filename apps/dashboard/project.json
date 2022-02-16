@@ -20,10 +20,7 @@
           "apps/dashboard/src/favicon.ico",
           "apps/dashboard/src/assets"
         ],
-        "styles": [
-          "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/dashboard/src/styles.scss"
-        ],
+        "styles": ["apps/dashboard/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -100,7 +97,7 @@
         "polyfills": "apps/dashboard/src/polyfills.ts",
         "styles": [
           "server/wwwroot/libs/shared/dashboard-styles/dashboards.css",
-          "apps/dashboard/src/styles.scss"
+          "apps/admin/src/styles.scss"
         ],
         "scripts": [],
         "assets": []
