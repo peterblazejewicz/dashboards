@@ -1,0 +1,109 @@
+{
+  "projectType": "application",
+  "root": "frontend/apps/dashboard",
+  "sourceRoot": "frontend/apps/dashboard/src",
+  "prefix": "dashboards-app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "customWebpackConfig": {
+          "path": "webpack.browser.js"
+        },
+        "outputPath": "dist/apps/dashboard",
+        "index": "frontend/apps/dashboard/src/index.html",
+        "main": "frontend/apps/dashboard/src/main.ts",
+        "polyfills": "frontend/apps/dashboard/src/polyfills.ts",
+        "tsConfig": "frontend/apps/dashboard/tsconfig.app.json",
+        "assets": [
+          "frontend/apps/dashboard/src/favicon.ico",
+          "frontend/apps/dashboard/src/assets"
+        ],
+        "styles": ["frontend/apps/dashboard/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "frontend/apps/dashboard/src/environments/environment.ts",
+              "with": "frontend/apps/dashboard/src/environments/environment.prod.ts"
+            }
+          ],
+          "vendorChunk": true,
+          "outputHashing": "none"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "dashboard:build:production"
+        },
+        "development": {
+          "browserTarget": "dashboard:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "dashboard:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "frontend/apps/dashboard/src/**/*.ts",
+          "frontend/apps/dashboard/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@angular-builders/custom-webpack:karma",
+      "outputs": ["coverage/apps/dashboard"],
+      "options": {
+        "customWebpackConfig": {
+          "path": "webpack.karma.js"
+        },
+        "main": "frontend/apps/dashboard/src/test.ts",
+        "tsConfig": "frontend/apps/dashboard/tsconfig.spec.json",
+        "karmaConfig": "frontend/apps/dashboard/karma.conf.js",
+        "polyfills": "frontend/apps/dashboard/src/polyfills.ts",
+        "styles": [
+          "dist/libs/shared/dashboard-styles/dashboards.css",
+          "frontend/apps/admin/src/styles.scss"
+        ],
+        "scripts": [],
+        "assets": []
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dashboard-styles"]
+}

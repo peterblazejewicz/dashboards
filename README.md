@@ -8,7 +8,7 @@ Proving ground type of dotnet core web application with multiple client applicat
 - Authentication with Auth0 (cookie based)
 - Razor pages (no controllers)
 - Angular 13 (or newer) multiple client applications
-- SCSS (Sass) library for styling (shared both server/client)
+- SCSS (Sass) library for styling (shared both backend/client)
 - hot reload support for Dotnet web app client application (in development)
 - content (string/variable) replacement for Angular client applications
 - Angular client applications with routing

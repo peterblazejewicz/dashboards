@@ -12,8 +12,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["server/Dashboards.csproj", "server/"]
-RUN dotnet restore "server/Dashboards.csproj"
+COPY ["backend/Dashboards.csproj", "backend/"]
+RUN dotnet restore "backend/Dashboards.csproj"
 COPY . .
 WORKDIR "/src/server"
 RUN dotnet build "Dashboards.csproj" -c Release -o /app/build
@@ -24,5 +24,5 @@ RUN dotnet publish "Dashboards.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-COPY --from=node /usr/src/app/server/wwwroot wwwroot/
+COPY --from=node /usr/src/app/frontend/ .
 ENTRYPOINT ["dotnet", "Dashboards.dll"]

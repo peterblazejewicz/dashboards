@@ -1,0 +1,26 @@
+{
+  "root": "frontend/libs/shared/dashboard-styles",
+  "sourceRoot": "frontend/libs/shared/dashboard-styles/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "command": "sass frontend/libs/shared/dashboard-styles/src/index.scss:dist/libs/shared/dashboard-styles/dashboards.css",
+        "outputPath": "dist/libs/shared/dashboard-styles"
+      },
+      "configurations": {
+        "production": {
+          "style": "compressed",
+          "no-source-map": true
+        },
+        "development": {
+          "style": "expanded"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  },
+  "tags": []
+}
