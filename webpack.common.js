@@ -25,9 +25,10 @@ const loaders = [
 const customConfig = {
   devServer: {
     client: {
-      webSocketURL: 'ws://0.0.0.0:4200/ws',
+      webSocketURL: 'wss://0.0.0.0:4200/ws',
     },
     hot: true,
+    host: '0.0.0.0',
     port: 4200,
     headers: {
       'Access-Control-Allow-Origin': '*',

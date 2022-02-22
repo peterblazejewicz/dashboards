@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Dashboards.Areas.Login.Pages
 {
-  public class IndexModel : PageModel
+  public class LoginModel : PageModel
   {
 
     [ViewData]
