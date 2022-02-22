@@ -45,5 +45,9 @@
       "style": "scss",
       "viewEncapsulation": "None"
     }
+  },
+  "workspaceLayout": {
+    "appsDir": "frontend/apps",
+    "libsDir": "frontend/libs"
   }
 }
