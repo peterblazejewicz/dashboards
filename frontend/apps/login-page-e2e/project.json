@@ -1,5 +1,6 @@
 {
-  "root": "frontend/apps/login-page-e2e",
+  "name": "login-page-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "frontend/apps/login-page-e2e/src",
   "projectType": "application",
   "targets": {

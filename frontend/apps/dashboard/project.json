@@ -1,12 +1,15 @@
 {
+  "name": "dashboard",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "frontend/apps/dashboard",
   "sourceRoot": "frontend/apps/dashboard/src",
   "prefix": "dashboards-app",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "customWebpackConfig": {
           "path": "webpack.browser.js"
@@ -20,8 +23,11 @@
           "frontend/apps/dashboard/src/favicon.ico",
           "frontend/apps/dashboard/src/assets"
         ],
-        "styles": ["frontend/apps/dashboard/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "frontend/apps/dashboard/src/styles.scss"
+        ],
+        "scripts": [],
+        "buildLibsFromSource": false
       },
       "configurations": {
         "production": {
@@ -58,7 +64,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/angular:webpack-server",
+      "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
           "browserTarget": "dashboard:build:production"
@@ -86,7 +92,9 @@
     },
     "test": {
       "executor": "@angular-builders/custom-webpack:karma",
-      "outputs": ["coverage/apps/dashboard"],
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/dashboard"
+      ],
       "options": {
         "customWebpackConfig": {
           "path": "webpack.karma.js"
@@ -105,5 +113,7 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["dashboard-styles"]
+  "implicitDependencies": [
+    "dashboard-styles"
+  ]
 }

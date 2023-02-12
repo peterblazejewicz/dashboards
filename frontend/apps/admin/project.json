@@ -1,12 +1,15 @@
 {
+  "name": "admin",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "frontend/apps/admin",
   "sourceRoot": "frontend/apps/admin/src",
   "prefix": "dashboards-app",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "customWebpackConfig": {
           "path": "webpack.browser.js"
@@ -16,9 +19,15 @@
         "main": "frontend/apps/admin/src/main.ts",
         "polyfills": "frontend/apps/admin/src/polyfills.ts",
         "tsConfig": "frontend/apps/admin/tsconfig.app.json",
-        "assets": ["frontend/apps/admin/src/favicon.ico", "frontend/apps/admin/src/assets"],
-        "styles": ["frontend/apps/admin/src/styles.scss"],
-        "scripts": []
+        "assets": [
+          "frontend/apps/admin/src/favicon.ico",
+          "frontend/apps/admin/src/assets"
+        ],
+        "styles": [
+          "frontend/apps/admin/src/styles.scss"
+        ],
+        "scripts": [],
+        "buildLibsFromSource": false
       },
       "configurations": {
         "production": {
@@ -55,7 +64,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/angular:webpack-server",
+      "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
           "browserTarget": "admin:build:production"
@@ -101,5 +110,7 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["dashboard-styles"]
+  "implicitDependencies": [
+    "dashboard-styles"
+  ]
 }

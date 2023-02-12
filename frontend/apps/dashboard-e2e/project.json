@@ -1,5 +1,6 @@
 {
-  "root": "frontend/apps/dashboard-e2e",
+  "name": "dashboard-e2e",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "frontend/apps/dashboard-e2e/src",
   "projectType": "application",
   "targets": {

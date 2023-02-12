@@ -1,12 +1,15 @@
 {
+  "name": "login-page",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "frontend/apps/login-page",
   "sourceRoot": "frontend/apps/login-page/src",
   "prefix": "dashboards-app",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "customWebpackConfig": {
           "path": "webpack.browser.js"
@@ -20,8 +23,11 @@
           "frontend/apps/login-page/src/favicon.ico",
           "frontend/apps/login-page/src/assets"
         ],
-        "styles": ["frontend/apps/login-page/src/styles.scss"],
-        "scripts": []
+        "styles": [
+          "frontend/apps/login-page/src/styles.scss"
+        ],
+        "scripts": [],
+        "buildLibsFromSource": false
       },
       "configurations": {
         "production": {
@@ -58,7 +64,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/angular:webpack-server",
+      "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
           "browserTarget": "login-page:build:production"
@@ -104,5 +110,7 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["dashboard-styles"]
+  "implicitDependencies": [
+    "dashboard-styles"
+  ]
 }

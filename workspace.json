@@ -8,5 +8,6 @@
     "dashboard-styles": "frontend/libs/shared/dashboard-styles",
     "login-page": "frontend/apps/login-page",
     "login-page-e2e": "frontend/apps/login-page-e2e"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
